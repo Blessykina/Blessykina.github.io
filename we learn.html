@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a337bdaeac.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-box">
+        <input type="checkbox" id="check">
+        <div class="btn-one">
+            <label for="check">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+        </div>
+        <h2 style="align-items: center;">
+            <span>W</span>
+            <span>E</span>
+            <span>-</span>
+            <span>L</span>
+            <span>E</span>
+            <span>A</span>
+            <span>R</span>
+            <span>N</span>
+        </h2>
+<div class="sidebar-menu">
+    <div class="logo">
+        <a href="#">We Learn</a>
+        
+    </div>
+    <div class="btn-two">
+        <label for="check">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+    </div>
+    <div class="menu" style="font-weight: bolder;">
+    <ul>
+        <li><a href="#"><i class="fa-solid fa-house"></i>Home</a></li>
+        <li><a href="signup.html"><i class="fa-solid fa-user"></i>
+            Sign Up</a></li>
+        <li><a href="#"><i class="fa-solid fa-list"></i>
+            Services</a></li>
+        <li><a href="#"><i class="fa-solid fa-calendar-days"></i>
+            Events</a></li>
+        <li><a href="#"><i class="fa-solid fa-bookmark"></i>
+            Free Books</a></li>
+        <li><a href="#"><i class="fa-solid fa-question"></i>
+            About</a></li>
+        <li><a href="#"><i class="fa-solid fa-comment"></i>
+            Feedback</a></li>
+        <li><a href="#"><i class="fa-solid fa-phone"></i>
+            Contact</a></li>
+    </ul>
+</div>
+    <div class="social-media">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+</div>
+    </div>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Calibri';
+        }
+        .main-box{
+            position: relative;
+            background-image: url("J/bck13.jpg");
+            background-repeat: no-repeat;
+            background-position: right;
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+        }
+        .main-box .sidebar-menu {
+            position: fixed;
+            height: 100vh;
+            left: -280px;
+            width: 280px;
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+        }
+        .sidebar-menu .logo {
+            position: absolute;
+            width: 100%;
+            height: 60px;
+            box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+        }
+        .sidebar-menu .logo a {
+            color: rgb(1, 1, 32);
+            font-size: 25px;
+            font-weight: 500;
+            position: absolute;
+            left: 50px;
+            line-height: 60px;
+            text-decoration: none;
+        }
+        .sidebar-menu .menu {
+            position: absolute;
+            top: 80px;
+            width: 100%;
+        }
+        .sidebar-menu .menu li {
+            margin-top: 6px;
+            padding: 14px 20px;
+            transition: all 0.3s linear;
+        }
+        .sidebar-menu .menu i {
+          color: rgb(1, 1, 32);  
+          font-size: 20px;
+          padding-right: 8px;
+        }
+        .sidebar-menu .menu a{
+            color: rgb(1, 1, 32);
+            font-size: 20px;
+            text-decoration: none;
+        }
+        .sidebar-menu .menu li:hover {
+            border-left: 1px solid black;
+            box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+        }
+        .sidebar-menu .social-media {
+            position: absolute;
+            left: 50%;
+            bottom: 20px;
+            transform: translateX(-50%);
+            cursor: pointer;
+        }
+        .social-media i {
+            padding: 0 5px;
+            color: rgb(1, 1, 32);
+            opacity: 0.6;
+            font-size: 20px;
+            transition: all 0.2s linear;
+        }
+        .social-media i:hover{
+            opacity: 1;
+        }
+        #check{
+            display: none;
+        }
+        .main-box .btn-one i{
+            color: rgb(1, 1, 32);
+            font-size: 30px;
+            font-weight: 700;
+            position: absolute;
+            left: 16px;
+            line-height: 60px;
+            cursor: pointer;
+            opacity: 1;
+            transition: all 0.3s linear;
+        }
+        .sidebar-menu .btn-two i{
+            font-size: 25px;
+            line-height: 60px;
+            position: absolute;
+            left: 240px;
+            cursor: pointer;
+            opacity: 0;
+            transition: all 0.3s linear;
+        }
+        .btn-one i:hover{
+            font-size: 24px;
+        }
+        #check:checked ~ .sidebar-menu{
+            left: 0;
+        }
+        #check:checked ~ .btn-one i{
+            opacity: 0;
+        }
+        #check:checked ~ .sidebar-menu .btn-two i{
+            opacity: 1;
+        }
+    </style>
+    <style>
+        img {
+            width: 290px;
+            height: 300px;
+            transition: .5s all;
+        }
+        img:hover {
+            height: 360px;
+            width: 360px;
+        }
+    
+        .Listed-books { 
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .Listed-books > img{
+            margin: 10px;
+        }
+    </style>     
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=luckiset+guy.com");
+
+    body{
+        margin: 0;
+        padding: 0;
+        background: rgb(77, 2, 33);
+        font-family: luckiest Guy, cursive;
+    }
+    h2{
+        margin-top: 1.5em;
+        text-align: center;
+    }
+    h2 span{
+        color: #fff;
+        position: relative;
+        top: 20px;
+        font-size: 45px;
+        text-shadow: 0 1px 0 #ccc
+        , 0 2px 0 #ccc
+        , 0 3px 0 #ccc
+        , 0 4px 0 #ccc 
+        , 0 5px 0 #ccc
+        , 0 6px 0 transparent
+        , 0 7px 0 transparent
+        , 0 8px 0 transparent
+        , 0 9px 0 transparent
+        , 0 10px 0 rgba(0, 0, 0, 0.4);
+        animation: bounce .3s infinite alternate;
+    }
+    @keyframes bounce{
+        100%{
+            top: -20px;
+            text-shadow: 0 1px 0 #ccc
+        , 0 2px 0 #ccc
+        , 0 3px 0 #ccc
+        , 0 4px 0 #ccc
+        , 0 5px 0 #ccc
+        , 0 6px 0 #ccc
+        , 0 7px 0 #ccc
+        , 0 8px 0 #ccc
+        , 0 9px 0 #ccc
+        , 0 50px 25px rgba(0, 0, 0, 0.2);
+        animation: bounce .3s infinite alternate;
+        }
+    }
+    h2 span:nth-child(2){
+        animation-delay: 0.1s;
+    }
+    h2 span:nth-child(3){
+        animation-delay: 0.2s;
+    }
+    h2 span:nth-child(4){
+        animation-delay: 0.3s;
+    }
+    h2 span:nth-child(5){
+        animation-delay: 0.4s;
+    }
+    h2 span:nth-child(6){
+        animation-delay: 0.5s;
+    }
+    
+</style>
+
+<body>
+  
+</body>
+</html>
+    <body>   
+        <header>
+            <img src="IMG_0578.JPG" alt="logo" width="200" height="200" >
+            
+            <br>
+        </header>
+    
+        <div class="bee" style="background-image: url('bck8.jpg'); height: 400px;">
+            <h2 style="padding: 30px;">
+                <span>W</span>
+                <span>E</span>
+                <span>L</span>
+                <span>C</span>
+                <span>O</span>
+                <span>M</span>
+                <span>E</span>
+            </h2>
+             <p style="align-items: center; color: #fff;" class="p1" ><b>Discover and explore a wide range of e-books to enhance your knowledge</b>
+             <a href="#books" class="cta-button" styl"><b>BROWSE BOOKS </b></a>
+             <br>
+             <input type="text" placeholder="Search.." style="align-items: center; width: 400px; padding: 14px; border-radius: 40px; border: 0px;">
+              </p>
+    
+        </div> 
+          <section id="books">
+            <h2 style="margin-bottom: 30px;">
+                <span>E</span>
+                <span>-</span>
+                <span>B</span>
+                <span>O</span>
+                <span>O</span>
+                <span>K</span>
+                <span>S</span>
+            </h2>
+            <div style="background-color: white;" class="Listed-books">
+        <img src="J/kiMKLaLrT.jpg" alt="book 1" height="300">
+        <img src="J//mathbook4.jpg" alt="book2" height="300"> 
+        <img src="J//englishbook4.jpg" alt="book3" height="300"> 
+        <img src="J//engbook6.jpg" alt="book7" height="300"> 
+        <img src="J//mathbook2.jpg" alt="book4" height="300"> 
+        <img src="J//kiMKLaLrT.jpg" alt="book5" height="300">
+        <img src="J//dictionary.png" alt="book6" height="300"> 
+        <img src="J//mathbook8.jpg" alt="book8" height="300"> 
+        </div>
+           </section>
+        
+        <div style="text-align: center;">
+        <section id="about">
+            <p>
+                <br><br><br>
+                <h2 style="margin-bottom: 50px;">
+                    <span>A</span>
+                    <span>B</span>
+                    <span>O</span>
+                    <span>u</span>
+                    <span>T</span>
+                </h2>
+            </p>
+            <p style="font-weight: bold;">
+                Living and working in San Francisco, I have had the oppurtunity to learn so much in my
+                <br> 
+                field.
+                I have been trained by a number of industry professionals,Which means I have had 
+                <br>
+                many different experiences that have built me into the skilled professional today.
+                <br>
+                Now, I am looking for new challenges and hope to venture even futher down my chosen 
+                <br>
+                career part, Learning as i go.Find out more about me by getting in touch.
+                <br><br><br>
+            </p>
+            <br>
+        </section>
+        </div>
+    
+            <section id="contact" style="background-color: #dafe90;">
+              <br><br><br><br>
+              <div style="padding-left: 20px; font-weight: bold;">
+              <a href="f" style="text-decoration: none; color: black;">FAQ</a>
+              <p><a href="f" style="text-decoration: none; color: black;">Shipping & Returns</a></p>
+              <p><a href="f" style="text-decoration: none; color: black;">Store Policy</a></p>
+              <p><a href="f" style="text-decoration: none; color: black;">Payments</a></p>
+             </div>
+             <div class="me" style="text-align: center; font-weight: bold; margin: -175px; padding-bottom: 50px;">
+                <a href="tel" style="text-decoration: none; color: black;">Tel:123-456-7890</a>
+                  <p><a href="mailto:group2@gmail.com" style="text-decoration: none; color: black;">group2@gmail</a></p>
+                  <a href="m" class="fa fa-facebook"></a>
+                  <a href="https://instagram.com/kenzig88" class="fa fa-instagram"></a>
+                  <a href="m" class="fa fa-youtube"></a>
+                  <div class="" style="text-align: right; padding-right: 200px;">
+                  subcribe to my newletter
+                  <br>
+                  <input type="text" placeholder="Enter your email here" style="padding: 8px; border: 1px;">
+                  <button type="submit" class="joinbtn" formaction="https://httpbin.org/post">JOIN</button>
+                 </div>
+            </section>
+        </body>
+    
+</body>
+</html>
